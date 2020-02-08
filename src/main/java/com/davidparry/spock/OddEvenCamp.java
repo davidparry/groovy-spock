@@ -1,27 +1,13 @@
 package com.davidparry.spock;
 
-import com.davidparry.spock.validation.Validator;
-
-public class OddEvenCamp {
-
-    private Validator<Integer> validator;
-
-    public OddEvenCamp(Validator<Integer> validator) {
-        this.validator = validator;
-    }
-
+public interface OddEvenCamp {
     /**
-     * Check if value is an even or odd number. if number is a 0 or negative number throw a runtime exception
+     * Create a method that checks if the integer value is an even or odd number, return 1 for even and 0 for odd.
+     * If number is 0 or negative number throw a runtime exception
+     *
      * @param number the number to be checked
      * @return 1 for even 0 for odd
+     * @throws NegativeNumberException
      */
-    int check(int number) {
-        this.validator.validate(number);
-        if (number % 2 == 0) {
-            return 0;
-        } else {
-            return 1;
-        }
-    }
-
+    int check(int number);
 }

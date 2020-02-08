@@ -11,9 +11,9 @@ class OddEvenCampSpec extends Specification {
     def setup() {}
 
     @Unroll
-    def "for the given value #number return will be #answer "() {
+    def "for the given value #number return will be #answer data driven"() {
         given:
-        OddEvenCamp oddEvenCamp = new OddEvenCamp(Mock(Validator))
+        OddEvenCampImpl oddEvenCamp = new OddEvenCampImpl(Mock(Validator))
 
         when:
         int result = oddEvenCamp.check(number)
@@ -33,7 +33,7 @@ class OddEvenCampSpec extends Specification {
     def "for negative number or zero exception thrown"() {
         given:
         NegativeChecker negativeChecker = new NegativeChecker()
-        OddEvenCamp oddEvenCamp = new OddEvenCamp(negativeChecker)
+        OddEvenCampImpl oddEvenCamp = new OddEvenCampImpl(negativeChecker)
 
         when:
         oddEvenCamp.check(-1)
@@ -43,10 +43,10 @@ class OddEvenCampSpec extends Specification {
 
     }
 
-    def "for checking for interactions to Validator"() {
+    def "for checking the behavior interactions with the Validator"() {
         given:
         Validator negativeChecker = Mock(Validator)
-        OddEvenCamp oddEvenCamp = new OddEvenCamp(negativeChecker)
+        OddEvenCampImpl oddEvenCamp = new OddEvenCampImpl(negativeChecker)
 
         when:
         oddEvenCamp.check(0)
