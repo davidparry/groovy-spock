@@ -11,3 +11,6 @@ Spock uses the Abstract Syntax Tree (AST) in Groovy, which removes many of the c
 - [] Blocks `setup -> stimulus -> response -> cleanup  ➰ where` 
 - [] Conditions `plain boolean expressions Groovy Truth`
 - [] Interactions & Mocks `behavior of objects not just checking state i.e. outcome`
+
+![Image of class diagram](oddeven.png)
+
