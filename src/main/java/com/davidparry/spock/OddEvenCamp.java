@@ -10,4 +10,6 @@ public interface OddEvenCamp {
      * @throws NegativeNumberException
      */
     int check(int number);
+
+    int useMe(String value);
 }
