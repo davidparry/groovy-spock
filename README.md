@@ -5,14 +5,17 @@ Thanks to its JUnit runner, Spock is compatible with most IDEs, build tools, and
 Spock uses the Abstract Syntax Tree (AST) in Groovy, which removes many of the ceremonial handcuffs that come with other frameworks, creating a fluid test domain-specific language.
 
 ## Topics 
-- [] Specification `spock.lang.*`
-- [] Fixture Methods `[setupSpec(), cleanupSpec()]  [setup(), cleanup()]` 
-- [] Feature Method `Heart of the Specification what you are testing`
-- [] Blocks `setup -> stimulus -> response -> cleanup  ➰ where` 
-- [] Conditions `plain boolean expressions Groovy Truth`
-- [] Interactions & Mocks `behavior of objects not just checking state i.e. outcome`
+- [x] Specification `spock.lang.*`
+- [x] Fixture Methods `[setupSpec(), cleanupSpec()]  [setup(), cleanup()]` 
+- [x] Feature Method `Heart of the Specification what you are testing`
+- [x] Blocks `setup -> stimulus -> response -> cleanup  ➰ where` 
+- [x] Conditions `plain boolean expressions Groovy Truth`
+- [x] Interactions & Mocks `behavior of objects not just checking state i.e. outcome`
 
 ## Class Diagram
 
 ![Image of class diagram](oddeven.png)
+
+### Resources
+[Presentation Slides](https://drive.google.com/file/d/1qK-ubquVmEOwZEgLIfCfRCvwhOC2vrTq/view?usp=sharing)
 
