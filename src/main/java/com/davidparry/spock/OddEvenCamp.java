@@ -7,7 +7,7 @@ public interface OddEvenCamp {
      *
      * @param number the number to be checked
      * @return 1 for even 0 for odd
-     * @throws NegativeNumberException
+     * @throws NegativeNumberException if the number is 0 or negative
      */
     int check(int number);
 }

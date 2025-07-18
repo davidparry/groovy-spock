@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "scout-server": {
+      "command": "scout",
+      "args": [
+        "-y"
+      ],
+      "env": {
+        "BUILD_SCOUT_LOGGING": "API"
+      }
+    }
+  }
+}

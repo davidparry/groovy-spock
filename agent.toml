@@ -1,0 +1,17 @@
+version = "1.0"
+
+imports = [
+    "agents/spock.toml"
+
+]
+#- gpt-4.1
+#- gpt-4o
+#- o3
+#- o4-mini
+#- claude-4-sonnet
+#- claude-4-opus
+#- gemini-2.5-pro
+
+model = "claude-4-opus"
+
+available_tools = ["filesystem","scout-server"]

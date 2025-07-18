@@ -13,8 +13,18 @@ description = "Getting Groovy with Spock"
 group mavenGroup
 version projVersionNumber
 
-sourceCompatibility = 8
+sourceCompatibility = 21
+targetCompatibility = 21
 
 dependencies {
-    testImplementation "org.spockframework:spock-core:1.3-groovy-2.5"
+    testImplementation "org.spockframework:spock-core:2.3-groovy-4.0"
+    testImplementation "org.apache.groovy:groovy:4.0.27"
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
 }
