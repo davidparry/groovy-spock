@@ -4,10 +4,18 @@ import com.davidparry.spock.util.RandomLogic;
 
 public class ProviderOfCrazyWords {
 
-    private RandomLogic randomLogic = new RandomLogic();
+    private final RandomLogic randomLogic;
 
-    public String giveMeACrazyNonce() {
-        return randomLogic.businessLogicMoneyMaker(System.currentTimeMillis());
+    public ProviderOfCrazyWords(RandomLogic randomLogic) {
+        this.randomLogic = randomLogic;
+    }
+
+    public String giveMeACrazyNonce(long value) {
+        if(value > 0) {
+            return randomLogic.businessLogicMoneyMaker(value);
+        } else {
+            return randomLogic.businessLogicMoneyMaker(System.currentTimeMillis());
+        }
     }
 
 }

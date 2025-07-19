@@ -18,6 +18,7 @@ sourceCompatibility = 21
 targetCompatibility = 21
 
 dependencies {
+    implementation "net.bytebuddy:byte-buddy:1.15.10"
     testImplementation "org.spockframework:spock-core:2.3-groovy-4.0"
     testImplementation "org.apache.groovy:groovy:4.0.27"
 }
