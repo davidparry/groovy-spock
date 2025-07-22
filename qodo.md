@@ -44,12 +44,14 @@ groovy-spock/
 │   │   └── com/davidparry/spock/     # Core package structure
 │   │       ├── util/                 # Utility classes
 │   │       └── validation/           # Validation framework
-│   └── test/groovy/                  # Spock test files (empty - for student implementation)
+│   └── test/groovy/                  # Spock test files
+│       └── com/davidparry/spock/     # Test package structure
 ├── build/                            # Gradle build artifacts
 ├── gradle/                           # Gradle wrapper files
 ├── build.gradle                      # Build configuration and dependencies
 ├── gradle.properties                 # Project metadata
 ├── settings.gradle                   # Gradle settings
+├── LICENSE                           # Apache License 2.0
 └── README.md                         # Project documentation and learning objectives
 ```
 
@@ -58,12 +60,14 @@ groovy-spock/
 | File | Purpose | When You'd Touch It |
 |------|---------|---------------------|
 | `src/main/java/com/davidparry/spock/OddEvenCamp.java` | Interface for odd/even validation | Understanding contract-based testing |
+| `src/main/java/com/davidparry/spock/OddEvenCampImpl.java` | Implementation of OddEvenCamp interface | Learning implementation testing patterns |
 | `src/main/java/com/davidparry/spock/ProviderOfCrazyWords.java` | Service demonstrating dependency injection | Learning mocking and interaction testing |
 | `src/main/java/com/davidparry/spock/util/RandomLogic.java` | Utility for random string generation | Testing utility methods and randomness |
 | `src/main/java/com/davidparry/spock/validation/Validator.java` | Generic validation interface | Understanding generic type testing |
+| `src/main/java/com/davidparry/spock/validation/IntegerValidator.java` | Concrete validator implementation | Testing validation logic |
 | `src/main/java/com/davidparry/spock/NegativeNumberException.java` | Custom exception for validation | Testing exception scenarios |
+| `src/test/groovy/com/davidparry/spock/OddEvenCampSpec.groovy` | Comprehensive Spock specification example | Learning Spock syntax and patterns |
 | `build.gradle` | Build configuration | Adding dependencies or changing build settings |
-| `src/test/groovy/` | Test implementation directory | Writing Spock specifications |
 
 ---
 
@@ -73,12 +77,12 @@ groovy-spock/
 - **Language:** Java 21 - Modern Java features with strong typing for clear contracts
 - **Testing Language:** Groovy 4.0.27 - Expressive syntax for readable test specifications
 - **Testing Framework:** Spock Framework 2.3 - BDD-style testing with powerful mocking capabilities
-- **Build Tool:** Gradle - Modern build automation with dependency management
+- **Build Tool:** Gradle 8.12.1 - Modern build automation with dependency management
 
 ### Key Libraries
 - **Spock Core** - Main testing framework providing specifications, mocks, and assertions
 - **Groovy** - Dynamic language runtime for expressive test syntax
-- **Byte Buddy** - Runtime code generation for advanced mocking scenarios
+- **Byte Buddy 1.15.10** - Runtime code generation for advanced mocking scenarios
 - **JaCoCo** - Code coverage analysis for test effectiveness measurement
 
 ### Development Tools
@@ -135,5 +139,6 @@ groovy-spock/
 - **Spock Syntax** - Follow given-when-then or setup-stimulus-response-cleanup patterns
 - **Mock vs Spy** - Understand the difference between Spock mocks and spies for different testing scenarios
 - **Exception Testing** - Use Spock's `thrown()` method for testing expected exceptions
+- **Data-Driven Testing** - Leverage Spock's `@Unroll` and `where:` blocks for parameterized tests
 
 *Updated at: 2025-01-27 UTC*

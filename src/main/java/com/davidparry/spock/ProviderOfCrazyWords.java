@@ -4,10 +4,10 @@ import com.davidparry.spock.util.RandomLogic;
 
 public class ProviderOfCrazyWords {
 
-    private final RandomLogic randomLogic;
+    private final RandomLogic randomLogic = new RandomLogic();
 
-    public ProviderOfCrazyWords(RandomLogic randomLogic) {
-        this.randomLogic = randomLogic;
+    public ProviderOfCrazyWords() {
+
     }
 
     public String giveMeACrazyNonce(long value) {
